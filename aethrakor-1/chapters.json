@@ -1,0 +1,196 @@
+[
+  {
+    "chapterId": 1,
+    "title": "The Farm",
+    "description": "You are a simple farmhand armed only with a pitchfork. A messenger arrives, begging you to rescue the kidnapped princess from the Lich King.",
+    "image": "farm.jpg",
+    "options": [
+      { "id": 1, "text": "Head toward the woods", "destinationId": 2 }
+    ]
+  },
+  {
+    "chapterId": 2,
+    "title": "Wooded Path",
+    "description": "A peaceful path winds through the trees. Birds sing, but danger lurks beyond.",
+    "image": "woods.jpg",
+    "options": [
+      { "id": 1, "text": "Continue into the forest", "destinationId": 3 },
+      { "id": 2, "text": "Explore the clearing", "destinationId": 5 },
+      { "id": 3, "text": "Explore the side trail", "destinationId": 4 }
+    ]
+  },
+  {
+    "chapterId": 3,
+    "title": "Spooky Forest",
+    "description": "The air grows cold. A massive spider web blocks your way deeper into the woods.",
+    "image": "spookyforest.jpg",
+    "options": [
+      { "id": 1, "text": "Try to burn the web", "destinationId": 10, "requiredItems": ["sticks", "matches"], "useItems": ["sticks", "matches"] },
+      { "id": 2, "text": "Go back", "destinationId": 2 }
+    ]
+  },
+    {
+    "chapterId": 4,
+    "title": "Abandoned Cabin",
+    "baseDescription": "Inside the dusty cabin, broken furniture litters the floor and cobwebs hang from the ceiling.",
+    "image": "cabin.jpg",
+    "items": {
+      "matches": {
+        "name": "Matches",
+        "description": "You discover a box of matches."
+      }
+    },
+    "options": [
+      { "id": 1, "text": "Return to the path", "destinationId": 2 }
+    ]
+  },
+  {
+    "chapterId": 5,
+    "title": "Forest Clearing",
+    "baseDescription": "A peaceful glade surrounded by trees. The ground is dry and covered in fallen branches.",
+    "image": "clearing.jpg",
+    "items": {
+      "sticks": {
+        "name": "Sticks",
+        "description": "You find a pile of dry sticks that look perfect for kindling."
+      }
+    },
+    "options": [
+      { "id": 1, "text": "Return to the path", "destinationId": 2 }
+    ]
+  },
+  {
+    "chapterId": 10,
+    "title": "Burning the Web",
+    "description": "You place the sticks at the base of the web and use the matches to ignite them. The web burns away, clearing your path.",
+    "image": "webburn.jpg",
+    "options": [
+      { "id": 1, "text": "Continue deeper into the forest", "destinationId": 11 }
+    ]
+  },
+  {
+    "chapterId": 11,
+    "title": "Spider Ambush",
+    "description": "A giant spider leaps from above! You try to fight with your pitchfork.",
+    "image": "spider.jpg",
+    "options": [
+      { "id": 1, "text": "Fight the spider", "destinationId": 12 },
+      { "id": 2, "text": "Run back", "destinationId": 33 }
+    ]
+  },
+  {
+    "chapterId": 12,
+    "title": "Spider Defeated",
+    "description": "You manage to stab the spider and escape. You press on.",
+    "image": "spiderdead.jpg",
+    "options": [
+      { "id": 1, "text": "Venture into the wastelands", "destinationId": 20 }
+    ]
+  },
+  {
+    "chapterId": 20,
+    "title": "Ashen Wastes",
+    "description": "You enter a scorched land where the sun is hidden and the ground burns.",
+    "image": "wasteland.jpg",
+    "options": [
+      { "id": 1, "text": "Follow the black trail", "destinationId": 21 },
+      { "id": 2, "text": "Climb the lava ridge", "destinationId": 22 }
+    ]
+  },
+  {
+    "chapterId": 21,
+    "title": "Trap: Lava Pit",
+    "description": "The trail ends suddenly. You fall into a pit of lava.",
+    "image": "lavapit.jpg",
+    "options": [],
+    "isEnding": true
+  },
+  {
+    "chapterId": 22,
+    "title": "Citadel Gates",
+    "description": "You arrive at the obsidian gates of the Lich King's citadel. Evil magic hums in the air.",
+    "image": "citadel.jpg",
+    "options": [
+      { "id": 1, "text": "Enter the gates", "destinationId": 23 }
+    ]
+  },
+  {
+    "chapterId": 23,
+    "title": "The Marble Hallway",
+    "description": "You creep down a marble hallway echoing with ancient whispers. A distant clatter of bone-on-metal rings from the shadows.",
+    "image": "hallway.jpg",
+    "options": [
+      {
+        "id": 1,
+        "text": "Proceed toward the sound",
+        "destinationId": 34
+      },
+      {
+        "id": 2,
+        "text": "Go back",
+        "destinationId": 35
+      }
+    ]
+  },
+  {
+    "chapterId": 30,
+    "title": "Throne Room",
+    "description": "You defeat the skeleton and burst into the throne room. The princess is chained beside the Lich King!",
+    "image": "throneroom.jpg",
+    "options": [
+      { "id": 1, "text": "Attack the Lich King", "destinationId": 31 },
+      { "id": 2, "text": "Attempt to free the princess", "destinationId": 32 }
+    ]
+  },
+  {
+    "chapterId": 31,
+    "title": "Victory",
+    "description": "With courage and luck, you slay the Lich King. The princess is saved!",
+    "image": "victory.jpg",
+    "options": [],
+    "isEnding": true
+  },
+  {
+    "chapterId": 32,
+    "title": "The Chains of Power",
+    "description": "As you reach for the magical chains, the Lich King unleashes a torrent of void magic. The raw energy consumes everything in its path, killing you both in a blinding flash.",
+    "image": "void_burst.jpg",
+    "options": [],
+    "isEnding": true
+  },
+  {
+    "chapterId": 33,
+    "title": "Venomous End",
+    "baseDescription": "As you flee from the monstrous spider, it lunges forward with terrifying speed. You feel a sharp sting in your leg - its poison fangs have sunk deep into your flesh.",
+    "image": "spider_bite.jpg",
+    "options": [],
+    "items": {},
+    "isEnding": true
+  },
+  {
+    "chapterId": 34,
+    "title": "Skeleton Warrior",
+    "description": "A skeleton warrior emerges from the darkness, clad in rusted armor and wielding a chipped sword. Its eyeless skull seems to glare at you with malice.",
+    "image": "skeleton_warrior.jpg",
+    "options": [
+      {
+        "id": 1,
+        "text": "Stand your ground and fight",
+        "destinationId": 30
+      },
+      {
+        "id": 2,
+        "text": "Flee back down the hallway",
+        "destinationId": 35
+      }
+    ]
+  },  
+  {
+    "chapterId": 35,
+    "title": "Struck Down",
+    "description": "As you turn to flee, the skeleton rushes forward with unnatural speed. Its ancient blade pierces your back, and darkness quickly takes you.",
+    "image": "death_skeleton.jpg",
+    "options": [],
+    "isEnding": true
+  }
+]
