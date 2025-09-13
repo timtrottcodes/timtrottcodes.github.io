@@ -17,7 +17,7 @@ async function loadInitialData() {
 // Minimal CSV parser
 function parseCSV(csvText) {
   const lines = csvText.trim().split("\n");
-  const headers = lines[0].split(",");
+  const headers = lines[0].trim().split(",");
   return lines.slice(1).map((line) => {
     const values = line.split(",");
     const obj = {};
@@ -88,10 +88,11 @@ function render() {
   if (!pageItems.length) $("#emptyState").removeClass("hidden");
   else $("#emptyState").addClass("hidden");
   pageItems.forEach((item) => {
+    console.log(item);
     const card = $(`<article class="group bg-white dark:bg-slate-800 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 overflow-hidden">
       <button class="block w-full text-left" data-id="${item.id}">
         <div class="aspect-[3/4] bg-slate-100 dark:bg-slate-700 overflow-hidden">
-          <img src="${item.image || ""}" alt="${item.title || item.name || ""}" class="w-full h-full object-cover"/>
+        <img src="${item.thumbnail || ""}" alt="${item.title || item.name || ""}" class="w-full h-full object-cover"/>
         </div>
         <div class="p-3">
           <h3 class="text-sm font-medium line-clamp-1">${item.title || item.name || ""}</h3>
